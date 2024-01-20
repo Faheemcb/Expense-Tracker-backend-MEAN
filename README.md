@@ -1,2 +1,2 @@
 # Expense-Tracker-backend-MEAN
-A complete backend for a basic TODO Mean Stack Application 
+A complete backend for Expense-Tracker Mean Stack Application 
