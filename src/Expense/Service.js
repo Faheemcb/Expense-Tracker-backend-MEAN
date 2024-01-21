@@ -1,9 +1,9 @@
-import Expense from "../Models/ExpenseModel"
+import Expense from "../Models/ExpenseModel.js"
 
 // Adding Expenses
 const addExpenses = async (data) => {
     try {
-        const expense = await expesn.create(data)
+        const expense = await Expense.create(data)
         if (expense) {
             return expense
         }

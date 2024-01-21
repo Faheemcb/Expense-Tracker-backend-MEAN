@@ -37,7 +37,7 @@ const incomeSchema = new mongoose.Schema(
         }
 
     },
-    {timestamps:true}
+    {versionKey:false}
 );
 
 const Income =  mongoose.model("Income",incomeSchema)

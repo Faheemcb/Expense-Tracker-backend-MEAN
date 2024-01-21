@@ -37,7 +37,7 @@ const expenseSchema = new mongoose.Schema(
         }
 
     },
-    {timestamps:true}
+    {versionKey: false}
 );
 
 const Expense =  mongoose.model("Expense",expenseSchema)
