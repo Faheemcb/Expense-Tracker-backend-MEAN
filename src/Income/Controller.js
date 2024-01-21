@@ -1,4 +1,4 @@
-import asyncHandler from "../Utils/asyncHandler";
+import asyncHandler from "../Utils/asyncHandler.js";
 import incomeService from "./Service.js"
 
 // Adding Income
