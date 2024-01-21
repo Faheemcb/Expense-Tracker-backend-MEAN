@@ -10,7 +10,7 @@ const addExpense = asyncHandler ( async (req , res) => {
 })
 
 // Fetching Expense
-const fecthExpense = asyncHandler (async (req , res) => {
+const fetchExpense = asyncHandler (async (req , res) => {
     const myExpense = await expenseService.getExpenses()
     res.json({myExpense})
 })
@@ -22,4 +22,4 @@ const deleteExpense = asyncHandler( async (req , res) => {
     res.json({removeExp})
 })
 
-export default {addExpense , fecthExpense , deleteExpense}
+export default {addExpense , fetchExpense , deleteExpense}
