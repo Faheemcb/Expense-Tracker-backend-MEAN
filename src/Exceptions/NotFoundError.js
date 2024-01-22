@@ -8,4 +8,4 @@ class NotFoundError extends Error {
 
 export default NotFoundError
 
-// Defining custom Not Found Error Handler
+// Defining Not Found Error Handler
