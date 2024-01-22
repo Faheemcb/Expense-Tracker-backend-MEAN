@@ -5,21 +5,21 @@ import incomeService from "./Service.js"
 const addIncome = asyncHandler ( async(req , res) => {
     const income = req.body;
     const result = await incomeService.addIncome(income)
-    res.json({result})
+    res.status(201).json(result)
 
 })
 
 // Fetching Income
 const fecthIncome = asyncHandler (async (req , res) => {
     const myIncome = await incomeService.getIncome()
-    res.json({myIncome})
+    res.status(200).json(myIncome)
 })
 
 // Deleting Income
 const deleteIncome = asyncHandler( async (req , res) => {
     const id = req.params.incomeId;
-    const removeInc = await incomeService.removeIncome(id)
-    res.json({removeInc})
+    await incomeService.removeIncome(id)
+    res.status(200).json({message:"Income removed Successfully"})
 })
 
 export default {addIncome , fecthIncome , deleteIncome}

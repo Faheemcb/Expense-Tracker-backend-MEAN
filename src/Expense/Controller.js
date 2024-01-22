@@ -5,21 +5,21 @@ import expenseService from "./Service.js"
 const addExpense = asyncHandler ( async (req , res) => {
     const expense = req.body;
     const result = await expenseService.addExpenses(expense)
-    res.json({result})
+    res.status(201).json(result)
 
 })
 
 // Fetching Expense
 const fetchExpense = asyncHandler (async (req , res) => {
     const myExpense = await expenseService.getExpenses()
-    res.json({myExpense})
+    res.status(200).json(myExpense)
 })
 
 // Deleting Expense
 const deleteExpense = asyncHandler( async (req , res) => {
     const id = req.params.expenseId;
-    const removeExp = await expenseService.removeExpense(id)
-    res.json({removeExp})
+    await expenseService.removeExpense(id)
+    res.status(200).json({message: "Expense Removed Successfully"})
 })
 
 export default {addExpense , fetchExpense , deleteExpense}
